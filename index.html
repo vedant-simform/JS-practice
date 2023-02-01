@@ -5,17 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Practice</title>
+    <link rel="stylesheet" href="style.css">
     <!-- <script src="practice.js"></script> -->
-    <script src="js2.js"></script>
+    <!-- <script src="js2.js"></script> -->
 
     
 </head>
 <body>
-    <h1>
-        JavaScript practice
-    </h1>
 
-    <button id="click-me">Click Me</button>
+<div id="application-box" style="text-align: center;">
+<form action="#">
+    <div class="app-box" id="box2">
+        <h2 style="text-align: center;">Applcation form</h2>
+        <p>Hello world</p>
+
+        <div class="form-element" id="input1">
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="">
+        </div>
+        <div class="form-element" id="input2">
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname">
+        </div>
+        <div class="form-element" id="input3">
+            <label id="gender-i" for="Gender">Gender</label>
+              
+            <input type="radio" name="Gender" id=""> male
+            <input type="radio" name="Gender" id=""> female
+        </div>
+        <div class="form-element" id="input4">
+            <label for="education">Education</label>
+            <select name="education" id="">
+                <option value="ten">Xth Grade</option>
+                <option value="twelve">XII th Grade</option>
+                <option value="Btech">B.Tech</option>
+                <option value="Mtech">M.Tech</option>
+            </select>
+        </div>
+        <div class="form-element" id="input5">
+            <label for="textarea">Introduction</label>
+            <br>
+            <textarea name="textarea" id="" cols="30" rows="10" placeholder="Tell something about your self..!"></textarea>
+        </div>
+        <div class="form-element" id="input6">
+            <input type="submit" value="submit" id="submit">
+            <input type="reset" value="reset" id="reset">
+       
+        </div>
+
+    </form>
+
+    </div>
+
+</div>
+
+
+
+
+
+    <script src="DOM.js"></script>
     <!-- <script src="practice.js"></script> -->
 </body>
 </html>
