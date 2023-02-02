@@ -94,6 +94,61 @@ let submission = document.querySelector("#submit");
 
 submission.addEventListener("click",()=> alert("Successfully Submitted"));
 
+//  Background change Event Listener ------------------------>
+console.log("------------ Background change Event Listener ---------");
+
+
+let bg = document.body;
+
+let rst = document.querySelector("#reset");
+console.log(rst);
+
+// rst.addEventListener("click",()=> {
+//     const clr = randombg();
+//     console.log(clr);
+//     bg.style.backgroundColor=clr;
+// })
+
+
+let id = setInterval(()=> {
+    const clr = randombg();
+    console.log(clr);
+    bg.style.backgroundColor=clr;},1000)
+
+    rst.addEventListener("click",()=>clearInterval(id));
+    
+
+function randombg(){
+    const r = Math.floor((Math.random())*256);
+    const g = Math.floor((Math.random())*256);
+    const b = Math.floor((Math.random())*256);
+    const bgColor = `rgb(${r},${g},${b})`;
+    return bgColor;
+}
+
+
+const keypressing = document.querySelector("#textarea");
+
+keypressing.addEventListener("keydown",(e)=>keypressing.textContent =e.key);
 
 
 
+const keypressing2 = document.querySelector("#keylog");
+
+document.addEventListener("keydown",(e)=>keypressing2.innerHTML +=e.key);
+
+
+
+const bucket = ["apple","orange","banana"];
+
+const prm = new Promise((resolve,rejected)=>{
+    if(bucket.includes("apple")){
+        resolve("apple");
+    }
+})
+
+prm.then((apple)=>{
+    console.log("Apple Found");
+}
+
+)
